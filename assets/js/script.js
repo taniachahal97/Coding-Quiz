@@ -3,6 +3,9 @@ var message = document.getElementById('time-up-message')
 var startButton = document.getElementById('start-btn')
 var timeLeft = 90;
 var score = 0; 
+var playerName = localStorage.getItem('name');
+var Score = localStorage.getItem('score');
+var finished = false;
 
 
 //disappear the question 1 from the page 
@@ -24,10 +27,26 @@ document.getElementById("question-4").style.display = "none";
 
 document.getElementById("question-5").style.display = "none";
 
+
+//disappear the text area and submit button from the page
+
+document.getElementById("first-name").style.display = "none";
+
+//disappear the submit button from the page
+
+document.getElementById("submit-button").style.display = "none";
+
+//disappear the go-back button from the page
+
+document.getElementById("go-back").style.display = "none";
+
+//disappear the clear button from the page
+
+document.getElementById("clear").style.display = "none";
+
 //Set timer for the Quiz 
 function countdown() {
-    
-    
+
     // TODO: Use the `setInterval()` method to call a function to be executed every 1000 milliseconds
     var timeInterval = setInterval(function () {
       //
@@ -35,13 +54,25 @@ function countdown() {
       //
       timeLeft--;
       timerEl.textContent = "Time: " + timeLeft;
+
+      if (timeLeft >= 0) {
+        // Tests if win condition is met
+        if (finished && timeLeft > 0) {
+          // Clears interval and stops timer
+          clearInterval(timeInterval);
+          saveScore();
+        }
+      }
+
+
       if(timeLeft === 0) {
         // Stops execution of action at set interval
         clearInterval(timeInterval);
-        // Calls function to disaply ganeover message
-        displayMessage();
+        // Calls saveScore function for player to enter their iinitials and score 
+        saveScore();
     }
   },1000);
+
 
   // subtracting 3 seconds from the timer for every wrong option selected for question 1 
   document.getElementById("btn-1").addEventListener('click', function(){
@@ -147,6 +178,10 @@ function countdown() {
 
   startButton.addEventListener("click", function(){
 
+    //disappear the start button from the screen once it is clicked
+
+    startButton.style.display = 'none';
+
     // starts the timer when button is clicked 
     countdown();
 
@@ -176,14 +211,14 @@ function countdown() {
         secondQuestion();
        
     }) 
-    
+
+        
 })
 
     
 function secondQuestion(){
 
    
-
     //console.log("Hello")
 
     //display the second question with the button options
@@ -305,6 +340,7 @@ function finalQuestion(){
     
     // disappear the outcome of the fourth question before the third question is displayed 
     document.getElementById("result-4").style.display = "none";
+    finished = true;
     saveScore();
 
 })
@@ -312,6 +348,7 @@ function finalQuestion(){
 
 function saveScore(){
 
+    
 
     // disappear the fifth question from the page
     document.getElementById("question-5").style.display = "none";
@@ -320,7 +357,132 @@ function saveScore(){
     var finalScore = document.getElementById("score");
     finalScore.value = score;
     finalScore.textContent = "Your final score is " + finalScore.value;
+
+    //display textbox and submit button 
+
+    document.getElementById("first-name").style.display = "block";
+    document.getElementById("submit-button").style.display = "block";
+
+    // add event listener to save button
+
+    var saveButton = document.getElementById("submit-button");
+    var firstNameInput = document.getElementById("first-name");
+
+    saveButton.addEventListener('click',function(){
+        var firstName = firstNameInput.value;
+        localStorage.setItem('name',firstName);
+
+        var playerScore = finalScore.value;
+        localStorage.setItem('score',playerScore);
+
+        var info = document.getElementById("player-info");
+        info.textContent = firstNameInput.value + " " + finalScore.value;
+
+        //get items out of local storage 
+
+        //playerName = localStorage.getItem('name');
+        //Score = localStorage.getItem('score');
+
+        saveInfo();
+    })
+
+    
+
+   
+
 }
+
+function saveInfo(){
+
+    
+    // disappear the outcome of the fifth question result
+    document.getElementById("result-5").style.display = "none";
+
+    //disappear the score message from the page 
+
+    document.getElementById("score").style.display = "none";
+
+     // disappear the submit button from the page
+     document.getElementById("submit-button").style.display = "none";
+
+      // disappear the fifth question from the page
+    document.getElementById("first-name").style.display = "none";
+
+    //display player name and score for the game 
+
+    //var info = document.getElementById("player-info");
+    //info.textContent = playerName + " " + Score;
+
+    //display go-back button
+
+    document.getElementById("go-back").style.display = "block";
+
+    //display clear-high score button
+
+    document.getElementById("clear").style.display = "block";
+
+    // disappear the view highscores button from the page 
+
+    document.getElementById("view-highscores").style.display = "none";
+
+
+}
+
+// function to display player information when view high-score button is displayed
+
+var highScoreBtn = document.getElementById("view-highscores");
+
+highScoreBtn.addEventListener('click', event => {
+
+    //disappear start button from the page 
+
+    document.getElementById("start-btn").style.display = "none";
+
+    //disappear the highscore button from the screen once it is clicked
+
+    highScoreBtn.style.display = 'none';
+
+    saveInfo();
+    var newName = document.getElementById("first-name");
+    var newScore = document.getElementById("score")
+
+    
+    var info = document.getElementById("saved-player-info");
+    info.textContent = newName.value + " " + newScore.value;
+
+    console.log("Heeloo");
+})
+
+
+// function to program go-back button 
+
+var goBackBtn = document.getElementById("go-back");
+
+goBackBtn.addEventListener('click', function(){
+
+    document.getElementById("start-btn").style.display = "block";
+    document.getElementById("view-highscores").style.display = "block";
+
+    //disappear the go back button and the clear high score button from the page 
+
+    document.getElementById("go-back").style.display = "none";
+    document.getElementById("clear").style.display = "none";
+
+    //disappear the player name and score from the page 
+
+    document.getElementById("player-info").style.display = "none";
+
+} )
+
+var clearBtn = document.getElementById("clear");
+
+clearBtn.addEventListener('click', function(){
+
+
+    document.getElementById("player-info").style.display = "none";
+})
+
+
 
 
 
