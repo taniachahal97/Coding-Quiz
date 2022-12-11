@@ -1,4 +1,312 @@
+#start-quiz{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 80px;
+    justify-content: center;
+    
+}
+
+#start-btn{
+    background-color: rgb(101, 157, 101);
+    color: white;
+}
+
+#Instructions{
+    
+     margin-top: 80px;
+}
+
+#opening-heading{
+    
+    margin-top: 100px;
+    
+}
+
+.title{
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
 #countdown{
     padding-left: 1200px;
+}
+
+#question-1 h2{
+    margin-left: 200px;
+}
+
+#question-2 h2{
+    margin-left: 200px;
+}
+
+#question-3 h2{
+    margin-left: 200px;
+}
+
+#question-4 h2{
+    margin-left: 200px;
+}
+
+#question-5 h2{
+    margin-left: 200px;
+}
+
+#btn-1{
+    margin-left: 200px;
+    background-color: rgb(101, 157, 101);
+    color: white;
+}
+
+#btn-2{
+    display: block;
+    margin-left: 200px;
+    background-color: rgb(101, 157, 101);
+    color: white;
+}
+
+#btn-3{
+    display:block;
+    margin-left: 200px;
+    background-color: rgb(101, 157, 101);
+    color: white;
+}
+
+#btn-4{
+    margin-left: 200px;
+    background-color: rgb(101, 157, 101);
+    color: white;
+}
+
+#q2-btn-1{
+    margin-left: 200px;
+    background-color: rgb(101, 157, 101);
+    color: white;
+}
+
+#q2-btn-2{
+    display:block;
+    margin-left: 200px;
+    background-color: rgb(101, 157, 101);
+    color: white;
+}
+
+#q2-btn-3{
+    margin-left: 200px;
+    background-color: rgb(101, 157, 101);
+    color: white;
+}
+
+#q2-btn-4{
+    display:block;
+    margin-left: 200px;
+    background-color: rgb(101, 157, 101);
+    color: white;
+}
+
+#q3-btn-1{
+    margin-left: 200px;
+    background-color: rgb(101, 157, 101);
+    color: white;
+}
+
+#q3-btn-2{
+    display:block;
+    margin-left: 200px;
+    background-color: rgb(101, 157, 101);
+    color: white;
+}
+
+#q3-btn-3{
+    margin-left: 200px;
+    background-color: rgb(101, 157, 101);
+    color: white;
+}
+
+#q3-btn-4{
+    display:block;
+    margin-left: 200px;
+    background-color: rgb(101, 157, 101);
+    color: white;
+}
+
+#q4-btn-1{
+    margin-left: 200px;
+    background-color: rgb(101, 157, 101);
+    color: white;
+}
+
+#q4-btn-2{
+    display:block;
+    margin-left: 200px;
+    background-color: rgb(101, 157, 101);
+    color: white;
+}
+
+#q4-btn-3{
+    margin-left: 200px;
+    background-color: rgb(101, 157, 101);
+    color: white;
+}
+
+#q4-btn-4{
+    display:block;
+    margin-left: 200px;
+    background-color: rgb(101, 157, 101);
+    color: white;
+}
+
+#q4-btn-5{
+    display:block;
+    margin-left: 200px;
+    background-color: rgb(101, 157, 101);
+    color: white;
+}
+
+#q5-btn-1{
+    margin-left: 200px;
+    background-color: rgb(101, 157, 101);
+    color: white;
+}
+
+#q5-btn-2{
+    display: block;
+    margin-left: 200px;
+    background-color: rgb(101, 157, 101);
+    color: white;
+}
+
+#q5-btn-3{
+    margin-left: 200px;
+    background-color: rgb(101, 157, 101);
+    color: white;
+}
+
+#q5-btn-4{
+    display: block;
+    margin-left: 200px;
+    background-color: rgb(101, 157, 101);
+    color: white;
+}
+
+#buttons{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 500px;
+    margin-right: 500px;
+    justify-content: space-around;
+
+}
+
+#question-1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#question-2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#question-3{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#question-4{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#question-5{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+#player-info{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+
+#highscores-heading{
+    position: relative;
+    text-align: center;
+}
+
+#saved-player-info{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+
+
+#save-name-score{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#score{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+#result-1{
+    margin-left: 200px;
+}
+
+#result-2{
+    margin-left: 200px;
+}
+
+#result-3{
+    margin-left: 200px;
+}
+
+#result-4{
+    margin-left: 200px;
+}
+
+
+
+.result-5{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#go-back{
+    background-color: rgb(101, 157, 101);
+    color: white;
+}
+
+#clear{
+    background-color: rgb(101, 157, 101);
+    color: white;
+}
+
+#submit-button{
+    background-color: rgb(101, 157, 101);
+    color: white;
+}
+
+#view-highscores{
+    background-color: rgb(101, 157, 101);
+    color: white;
 }
 
