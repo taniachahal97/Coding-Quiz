@@ -8,19 +8,44 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
+
     <div class="container">
-      <h1 class="Welcome">Welcome to Speed Reader</h1>
       <h2 id="countdown"></h2>
-      <h3 id="time-up-message"></h3>
-      <button id="start-btn">Start</button>
-      <button id="view-highscores">View Highscores</button>
-      <button id = "go-back">Go Back</button>
-      <button id="clear">Clear Highscores</button>
-      <h2 id="saved-player-info"></h2>
+      
     </div>
+
+    <section id = "highscore">
+      <button id="view-highscores">View Highscores</button>
+    </section>
+
+    <div class = "title">
+        <h2 id = "opening-heading"> Coding Quiz Challenge</h2>
+        <h3 id="Instructions"> Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score time by 3 seconds</h3>
+    </div>
+    
+    <section id="start-quiz">
+      <button id="start-btn">Start Quiz</button>
+    </section>
+
+
+    <h2 id="highscores-heading"> HighScores</h2>
+    <h2 id="saved-player-info"></h2>
+
+    
 
     <h2 id="score"></h2>
     <h2 id="player-info"></h2>
+
+    <div id="buttons">
+
+        <button id = "go-back">Go Back</button>
+        <button id="clear">Clear Highscores</button>
+
+    </div>
+    
+      
+
+    
 
     <!--Question 1 with suitable options -->
     <section id="question-1">
@@ -34,7 +59,7 @@
         
     </section>
 
-    <p id="result-1"></p>
+    
 
     
 
@@ -51,7 +76,9 @@
         </div>
     </section>
 
-    <p id="result-2"></p>
+    
+    <p id="result-1"></p>
+    
 
 
      <!--Question 3 with suitable options -->
@@ -66,7 +93,10 @@
             
         </div>
     </section>
-    <p id="result-3"></p>
+
+    <p id="result-2"></p>
+
+   
 
     <!--Question 4 with suitable options -->
 
@@ -82,10 +112,9 @@
         </div>
     </section>
 
-    <p id="result-4"></p>
+    <p id="result-3"></p>
 
-   
-
+    
      <!--Question 5 with suitable options -->
 
      <section id="question-5">
@@ -99,13 +128,18 @@
         </div>
     </section>
 
-    <p id="result-5"></p>
+    <p id="result-4"></p>
 
-    <section id="save-name-score">
+   
+
+    <div id="save-name-score">
         <input type="text" id="first-name"/>
-        <button id="submit-button"> Submit</button>
-    </section>
+        <button id="submit-button"> Submit </button>
+    </div>
 
+    <div class=" result-5">
+        <p id="result-5"></p>
+    </div>
     
 
 

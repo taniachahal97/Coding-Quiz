@@ -1,5 +1,5 @@
 var timerEl = document.getElementById('countdown');
-var message = document.getElementById('time-up-message')
+var message = document.getElementById('Instructions')
 var startButton = document.getElementById('start-btn')
 var timeLeft = 90;
 var score = 0; 
@@ -43,6 +43,9 @@ document.getElementById("go-back").style.display = "none";
 //disappear the clear button from the page
 
 document.getElementById("clear").style.display = "none";
+
+//disappear the highscores heading from the page 
+document.getElementById("highscores-heading").style.display = "none";
 
 //Set timer for the Quiz 
 function countdown() {
@@ -168,11 +171,11 @@ function countdown() {
 
   
 
-  function displayMessage(){
+  //function displayMessage(){
 
-    message.textContent = "Time Up!!"
+    //message.textContent = "Time Up!!"
 
-  }
+  //}
 
   // adding event listener to start button
 
@@ -181,6 +184,12 @@ function countdown() {
     //disappear the start button from the screen once it is clicked
 
     startButton.style.display = 'none';
+
+    //disappear instructions from the page
+    document.getElementById("Instructions").style.display = "none";
+
+    //disappear Quiz challenge heading from the page
+    document.getElementById("opening-heading").style.display = "none";
 
     // starts the timer when button is clicked 
     countdown();
@@ -413,6 +422,10 @@ function saveInfo(){
     //var info = document.getElementById("player-info");
     //info.textContent = playerName + " " + Score;
 
+    // display highcores heading 
+
+    document.getElementById("highscores-heading").style.display = "block";
+
     //display go-back button
 
     document.getElementById("go-back").style.display = "block";
@@ -437,6 +450,10 @@ highScoreBtn.addEventListener('click', event => {
     //disappear start button from the page 
 
     document.getElementById("start-btn").style.display = "none";
+    document.getElementById("Instructions").style.display = "none";
+
+    //disappear Quiz challenge heading from the page
+    document.getElementById("opening-heading").style.display = "none";
 
     //disappear the highscore button from the screen once it is clicked
 
@@ -460,20 +477,30 @@ var goBackBtn = document.getElementById("go-back");
 
 goBackBtn.addEventListener('click', function(){
 
+    // display these elements on the page
     document.getElementById("start-btn").style.display = "block";
+    document.getElementById("Instructions").style.display = "block";
     document.getElementById("view-highscores").style.display = "block";
+    //disappear Quiz challenge heading from the page
+    document.getElementById("opening-heading").style.display = "block";
 
     //disappear the go back button and the clear high score button from the page 
 
     document.getElementById("go-back").style.display = "none";
     document.getElementById("clear").style.display = "none";
 
+    // disappear the highscores heading from the page
+
+    document.getElementById("highscores-heading").style.display = "none";
+
     //disappear the player name and score from the page 
 
     document.getElementById("player-info").style.display = "none";
 
+
 } )
 
+// function to program clear highcores button
 var clearBtn = document.getElementById("clear");
 
 clearBtn.addEventListener('click', function(){
