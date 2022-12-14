@@ -14,9 +14,9 @@ Clone the module-4-challenge repository to your local machine. The module-4-chal
 
 Open the index.html file in VS Code and run the file in the browser to view the webpage. 
 
-![portfolio image 1](images/image-1.png)
-![portfolio image 3](images/image-2.png)
-![portfolio image 2](images/image-3.png)
+![portfolio image 1](images/image-1)
+![portfolio image 3](images/image-2)
+![portfolio image 2](images/image-3)
 
 
 ## License
