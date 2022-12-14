@@ -1,11 +1,11 @@
 var timerEl = document.getElementById('countdown');
 var message = document.getElementById('Instructions')
 var startButton = document.getElementById('start-btn')
-var timeLeft = 90;
+var timeLeft;
 var score = 0; 
 var playerName = localStorage.getItem('name');
 var Score = localStorage.getItem('score');
-var finished = false;
+var finished;
 
 
 //disappear the question 1 from the page 
@@ -170,18 +170,15 @@ function countdown() {
 }
 
   
-
-  //function displayMessage(){
-
-    //message.textContent = "Time Up!!"
-
-  //}
-
   // adding event listener to start button
 
   startButton.addEventListener("click", function(){
+    timeLeft = 90;
+    finished = false;
 
     //disappear the start button from the screen once it is clicked
+    
+    document.getElementById("first-name").value = " ";
 
     startButton.style.display = 'none';
 
@@ -357,10 +354,18 @@ function finalQuestion(){
 
 function saveScore(){
 
-    
-
-    // disappear the fifth question from the page
+    // disappear all questions from the page
+    document.getElementById("question-1").style.display = "none";
+    document.getElementById("question-2").style.display = "none";
+    document.getElementById("question-3").style.display = "none";
+    document.getElementById("question-4").style.display = "none";
     document.getElementById("question-5").style.display = "none";
+
+    // disappear results of first 4 questions from the page 
+    document.getElementById("result-1").style.display = "none";
+    document.getElementById("result-2").style.display = "none";
+    document.getElementById("result-3").style.display = "none";
+    document.getElementById("result-4").style.display = "none";
 
     //display the final score 
     var finalScore = document.getElementById("score");
@@ -496,6 +501,7 @@ goBackBtn.addEventListener('click', function(){
     //disappear the player name and score from the page 
 
     document.getElementById("player-info").style.display = "none";
+    //document.getElementById("saved-player-info").style.display = "none";
 
 
 } )
@@ -507,7 +513,10 @@ clearBtn.addEventListener('click', function(){
 
 
     document.getElementById("player-info").style.display = "none";
+    document.getElementById("saved-player-info").style.display = "none";
 })
+
+
 
 
 
