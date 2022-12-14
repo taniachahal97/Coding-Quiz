@@ -1,3 +1,4 @@
+
 #start-quiz{
     display: flex;
     flex-wrap: wrap;
@@ -6,11 +7,13 @@
     
 }
 
+/*styling start button*/
 #start-btn{
     background-color: rgb(101, 157, 101);
     color: white;
 }
 
+/*styling the quiz instructions on the home page */
 #Instructions{
     
      margin-top: 80px;
@@ -80,6 +83,7 @@
     color: white;
 }
 
+/* styling the option buttons for all the questions */
 #q2-btn-1{
     margin-left: 200px;
     background-color: rgb(101, 157, 101);
@@ -191,6 +195,7 @@
     color: white;
 }
 
+/* styling the clear highscores and go back button */
 #buttons{
     display: flex;
     flex-wrap: wrap;
@@ -200,6 +205,7 @@
 
 }
 
+/* styling the questions displayed on the page for the quiz */
 #question-1{
     display: flex;
     flex-wrap: wrap;
@@ -266,6 +272,7 @@
 
 }
 
+/* styling the results displayed for each question */
 #result-1{
     margin-left: 200px;
 }
@@ -290,6 +297,7 @@
     justify-content: center;
 }
 
+/* setting the text and background color of go back, clear highscores, view highscores and submit buttons */
 #go-back{
     background-color: rgb(101, 157, 101);
     color: white;
